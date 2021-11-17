@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <script src="angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+<div ng-if="true">{{ntheTime}}</div>
+   
+</div>
+<style>
+  input{
+    width: 30%;
+  padding: 8px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
+  }
+  input:focus{
+    border: 3px solid red;
+
+  }
+  input.ng-invalid{
+    border-color: red;
+  }
+  input.ng-valid{
+    border-color: green;
+  }
+</style>
+
+<script>
+var app = angular.module('myApp', []).controller('myCtrl',mycontroller);
+mycontroller.$inject=['$scope'];
+
+function mycontroller($scope,$interval) {
+    $scope.ntheTime=new Error('helo');
+    $scope.orderBy=function(x){
+      $scope.orderby=x;
+    }
+};
+
+
+
+</script>
+
+</body>
+</html>
+
+
